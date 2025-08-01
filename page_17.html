@@ -1,0 +1,206 @@
+<!--Actual display size of this page: width=1280, height=848, aspect ratio=16:10.6--><!--Actual display size of this page: width=1280, height=848, aspect ratio=16:10.6--><!DOCTYPE html><html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>30万円未満の資産購入</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        @font-face {
+            font-family: "Yu Gothic";
+            src: local("Yu Gothic Medium"), local("YuGothic-Medium");
+            font-weight: normal;
+        }
+        @font-face {
+            font-family: "Yu Gothic";
+            src: local("Yu Gothic Bold"), local("YuGothic-Bold");
+            font-weight: bold;
+        }
+        body {
+            width: 1280px; 
+            min-height: 848px; 
+            margin: 0;
+            padding: 0;
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 848px;
+            position: relative;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+        }
+        .title-text {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            font-feature-settings: "palt";
+        }
+        .content-text {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            font-feature-settings: "palt";
+        }
+        .feature-box {
+            border-left: 4px solid;
+            transition: transform 0.3s;
+        }
+        .feature-box:hover {
+            transform: translateX(5px);
+        }
+        .comparison-box {
+            height: 180px;
+        }
+        .accent-bar {
+            background: linear-gradient(90deg, #FFD700 0%, #4CAF50 100%);
+            height: 4px;
+            width: 80px;
+        }
+        * {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div class="slide bg-gray-100 flex flex-col overflow-hidden">
+<!-- Header with title -->
+<div class="bg-yellow-500 text-white py-5 px-12 w-full">
+<h1 class="title-text text-4xl font-bold">30万円未満の資産購入</h1>
+<p class="content-text text-xl mt-1 text-white">少額減価償却資産の特例を活用した節税方法</p>
+</div>
+<!-- Main content area -->
+<div class="flex flex-1 p-8">
+<!-- Left column -->
+<div class="w-1/2 pr-6">
+<div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+<h2 class="title-text text-2xl font-bold text-yellow-600 mb-3">
+<i class="fas fa-info-circle mr-2"></i>特例の概要
+                    </h2>
+<div class="accent-bar mb-4"></div>
+<p class="content-text text-gray-700 mb-4">
+                        30万円未満の資産を購入した場合、通常は複数年にわたって減価償却するところを、
+                        <span class="font-bold">購入した年度に一括で経費計上</span>できる特例です。
+                    </p>
+<div class="flex items-center mb-2">
+<i class="fas fa-check-circle text-green-600 mr-2"></i>
+<p class="content-text text-gray-700">
+<span class="font-bold">対象者：</span>中小企業者等
+                        </p>
+</div>
+<div class="flex items-center mb-2">
+<i class="fas fa-check-circle text-green-600 mr-2"></i>
+<p class="content-text text-gray-700">
+<span class="font-bold">節税効果：</span>法人税・所得税の軽減
+                        </p>
+</div>
+<div class="flex items-center">
+<i class="fas fa-check-circle text-green-600 mr-2"></i>
+<p class="content-text text-gray-700">
+<span class="font-bold">手続き時期：</span>決算日までに購入・事業供用
+                        </p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-lg p-6">
+<h2 class="title-text text-2xl font-bold text-yellow-600 mb-3">
+<i class="fas fa-list-check mr-2"></i>適用要件
+                    </h2>
+<div class="accent-bar mb-4"></div>
+<div class="feature-box border-blue-800 bg-blue-50 rounded-r-lg p-4 mb-4">
+<p class="content-text text-gray-800 font-bold">中小企業者等であること</p>
+<p class="content-text text-gray-600 text-sm">資本金1億円以下の法人、個人事業主など</p>
+</div>
+<div class="feature-box border-blue-800 bg-blue-50 rounded-r-lg p-4 mb-4">
+<p class="content-text text-gray-800 font-bold">30万円未満の減価償却資産であること</p>
+<p class="content-text text-gray-600 text-sm">税込価格が30万円未満の設備・備品等</p>
+</div>
+<div class="feature-box border-blue-800 bg-blue-50 rounded-r-lg p-4">
+<p class="content-text text-gray-800 font-bold">事業の用に供していること</p>
+<p class="content-text text-gray-600 text-sm">決算日までに購入し、事業で使用開始していること</p>
+</div>
+</div>
+</div>
+<!-- Right column -->
+<div class="w-1/2 pl-6">
+<div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+<h2 class="title-text text-2xl font-bold text-yellow-600 mb-3">
+<i class="fas fa-coins mr-2"></i>節税効果の比較
+                    </h2>
+<div class="accent-bar mb-4"></div>
+<div class="flex mb-6">
+<div class="w-1/2 pr-3">
+<div class="bg-blue-100 rounded-lg p-4 text-center comparison-box">
+<div class="title-text text-lg font-bold text-blue-900 mb-2">
+<i class="fas fa-star mr-1"></i>特例適用
+                                </div>
+<div class="content-text text-gray-800 mb-4">
+                                    30万円の資産を購入
+                                </div>
+<div class="bg-white rounded-lg p-3 shadow-inner">
+<p class="content-text text-gray-700 mb-1">初年度：<span class="font-bold text-blue-900">30万円</span>経費計上</p>
+<p class="content-text text-gray-700 mb-1">2年目：<span class="font-bold text-blue-900">0円</span></p>
+<p class="content-text text-gray-700">3年目：<span class="font-bold text-blue-900">0円</span></p>
+</div>
+</div>
+</div>
+<div class="w-1/2 pl-3">
+<div class="bg-gray-100 rounded-lg p-4 text-center comparison-box">
+<div class="title-text text-lg font-bold text-gray-700 mb-2">
+<i class="fas fa-calculator mr-1"></i>通常の減価償却
+                                </div>
+<div class="content-text text-gray-800 mb-4">
+                                    30万円の資産を購入（耐用年数5年）
+                                </div>
+<div class="bg-white rounded-lg p-3 shadow-inner">
+<p class="content-text text-gray-700 mb-1">初年度：<span class="font-bold text-gray-700">6万円</span>経費計上</p>
+<p class="content-text text-gray-700 mb-1">2年目：<span class="font-bold text-gray-700">6万円</span></p>
+<p class="content-text text-gray-700">3年目：<span class="font-bold text-gray-700">6万円</span>（以降も継続）</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-r-lg">
+<p class="content-text text-gray-700">
+<span class="font-bold">メリット：</span>
+                            購入した年度に全額経費計上できるため、その年の課税所得を圧縮し、
+                            <span class="font-bold text-yellow-600">即時の節税効果</span>が得られます。
+                        </p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-lg p-6">
+<h2 class="title-text text-2xl font-bold text-yellow-600 mb-3">
+<i class="fas fa-lightbulb mr-2"></i>活用のポイント
+                    </h2>
+<div class="accent-bar mb-4"></div>
+<div class="flex items-start mb-3">
+<div class="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+<span class="title-text font-bold">1</span>
+</div>
+<p class="content-text text-gray-700 ml-3">
+                            決算前に事業に必要な30万円未満の資産購入を検討する
+                        </p>
+</div>
+<div class="flex items-start mb-3">
+<div class="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+<span class="title-text font-bold">2</span>
+</div>
+<p class="content-text text-gray-700 ml-3">
+                            購入後は必ず事業の用に供し、適切な証憑書類を保管する
+                        </p>
+</div>
+<div class="flex items-start">
+<div class="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+<span class="title-text font-bold">3</span>
+</div>
+<p class="content-text text-gray-700 ml-3">
+                            年度内の購入計画を立て、計画的に資産を更新する
+                        </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer with page number -->
+<div class="bg-yellow-500 h-2 w-full"></div>
+<div class="absolute bottom-4 right-8 bg-white rounded-full px-4 py-1 shadow-md">
+<span class="content-text text-yellow-600 font-bold">17/44</span>
+</div>
+</div>
+
+</body></html>

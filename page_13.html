@@ -1,0 +1,243 @@
+<!--Actual display size of this page: width=1280, height=764, aspect ratio=16:9.6--><!--Actual display size of this page: width=1280, height=764, aspect ratio=16:9.6--><!DOCTYPE html><html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>短期前払費用の特例</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        @font-face {
+            font-family: "Yu Gothic";
+            src: local("Yu Gothic Medium"), local("YuGothic-Medium");
+            font-weight: normal;
+        }
+        @font-face {
+            font-family: "Yu Gothic";
+            src: local("Yu Gothic Bold"), local("YuGothic-Bold");
+            font-weight: bold;
+        }
+        body {
+            width: 1280px; 
+            min-height: 764px; 
+            margin: 0;
+            padding: 0;
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 764px;
+            position: relative;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+        }
+        .title-text {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            font-feature-settings: "palt";
+        }
+        .content-text {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            font-feature-settings: "palt";
+        }
+        .accent-bar {
+            background: linear-gradient(90deg, #FFD700 0%, #4CAF50 100%);
+            height: 4px;
+            width: 100px;
+        }
+        .info-box {
+            border-left: 4px solid;
+        }
+        * {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div class="slide bg-gray-100 flex flex-col overflow-hidden">
+<!-- Header with title -->
+<div class="bg-blue-900 text-white py-5 px-12 w-full">
+<h1 class="title-text text-4xl font-bold">短期前払費用の特例</h1>
+<p class="content-text text-xl mt-1 text-gray-200">前払費用の一括計上による節税手法</p>
+</div>
+<!-- Main content area -->
+<div class="flex flex-1 p-8">
+<!-- Left column - explanation -->
+<div class="w-1/2 pr-6">
+<div class="bg-white rounded-lg shadow-lg p-6 h-full flex flex-col">
+<h2 class="title-text text-2xl font-bold text-blue-900 mb-3">特例の概要</h2>
+<div class="accent-bar mb-5"></div>
+<p class="content-text text-gray-700 mb-5">
+                        1年分の家賃や保険料等を前払いし、支払った期の費用として一括計上する特例です。通常は期間按分するところを、支払時に全額を経費として計上できます。
+                    </p>
+<div class="info-box border-blue-900 bg-blue-50 rounded-r-lg p-4 mb-5">
+<h3 class="title-text text-lg font-bold text-blue-900 mb-2">
+<i class="fas fa-users mr-2"></i>対象者
+                        </h3>
+<p class="content-text text-gray-700">
+                            法人・個人事業主
+                        </p>
+</div>
+<div class="info-box border-green-600 bg-green-50 rounded-r-lg p-4 mb-5">
+<h3 class="title-text text-lg font-bold text-green-700 mb-2">
+<i class="fas fa-coins mr-2"></i>節税効果
+                        </h3>
+<p class="content-text text-gray-700">
+                            費用の早期計上により、当期の課税所得を圧縮し税負担を軽減できます。
+                        </p>
+</div>
+<div class="info-box border-yellow-500 bg-yellow-50 rounded-r-lg p-4">
+<h3 class="title-text text-lg font-bold text-yellow-600 mb-2">
+<i class="fas fa-calendar-alt mr-2"></i>手続き時期／方法
+                        </h3>
+<p class="content-text text-gray-700">
+                            決算前に契約変更・支払いを行います。支払証憑を保管しておきましょう。
+                        </p>
+</div>
+</div>
+</div>
+<!-- Right column - visualization and tips -->
+<div class="w-1/2 pl-6 flex flex-col">
+<!-- Timeline visualization -->
+<div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+<h3 class="title-text text-xl font-bold text-blue-900 mb-3">前払費用の一括計上イメージ</h3>
+<div class="my-4 h-48" id="timeline-visualization"></div>
+<script>
+                        // Simple timeline visualization with D3.js
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const width = 500;
+                            const height = 120;
+
+                            const svg = d3.select("#timeline-visualization")
+                                .append("svg")
+                                .attr("width", width)
+                                .attr("height", height);
+
+                            // Draw timeline
+                            svg.append("line")
+                                .attr("x1", 50)
+                                .attr("y1", 60)
+                                .attr("x2", width - 50)
+                                .attr("y2", 60)
+                                .attr("stroke", "#003366")
+                                .attr("stroke-width", 4);
+
+                            // Add year markers
+                            const years = ["当期", "翌期"];
+                            years.forEach((year, i) => {
+                                const x = 50 + (i * ((width - 100) / (years.length - 1)));
+
+                                svg.append("line")
+                                    .attr("x1", x)
+                                    .attr("y1", 50)
+                                    .attr("x2", x)
+                                    .attr("y2", 70)
+                                    .attr("stroke", "#003366")
+                                    .attr("stroke-width", 2);
+
+                                svg.append("text")
+                                    .attr("x", x)
+                                    .attr("y", 40)
+                                    .attr("text-anchor", "middle")
+                                    .attr("font-family", "'Yu Gothic', 'YuGothic', '游ゴシック', '游ゴシック体', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'Meiryo', 'メイリオ', sans-serif")
+                                    .attr("font-size", "16px")
+                                    .attr("fill", "#003366")
+                                    .text(year);
+                            });
+
+                            // Draw expense block for normal case
+                            svg.append("rect")
+                                .attr("x", 60)
+                                .attr("y", 85)
+                                .attr("width", 200)
+                                .attr("height", 20)
+                                .attr("fill", "#4CAF50")
+                                .attr("opacity", 0.7);
+
+                            svg.append("text")
+                                .attr("x", 160)
+                                .attr("y", 100)
+                                .attr("text-anchor", "middle")
+                                .attr("font-family", "'Yu Gothic', 'YuGothic', '游ゴシック', '游ゴシック体', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'Meiryo', 'メイリオ', sans-serif")
+                                .attr("font-size", "14px")
+                                .attr("fill", "#fff")
+                                .text("通常：6ヶ月分を当期計上");
+
+                            svg.append("rect")
+                                .attr("x", 260)
+                                .attr("y", 85)
+                                .attr("width", 200)
+                                .attr("height", 20)
+                                .attr("fill", "#4CAF50")
+                                .attr("opacity", 0.3);
+
+                            svg.append("text")
+                                .attr("x", 360)
+                                .attr("y", 100)
+                                .attr("text-anchor", "middle")
+                                .attr("font-family", "'Yu Gothic', 'YuGothic', '游ゴシック', '游ゴシック体', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'Meiryo', 'メイリオ', sans-serif")
+                                .attr("font-size", "14px")
+                                .attr("fill", "#000")
+                                .text("通常：6ヶ月分を翌期計上");
+
+                            // Draw expense block for special case
+                            svg.append("rect")
+                                .attr("x", 60)
+                                .attr("y", 115)
+                                .attr("width", 400)
+                                .attr("height", 20)
+                                .attr("fill", "#FFD700")
+                                .attr("opacity", 0.7);
+
+                            svg.append("text")
+                                .attr("x", 260)
+                                .attr("y", 130)
+                                .attr("text-anchor", "middle")
+                                .attr("font-family", "'Yu Gothic', 'YuGothic', '游ゴシック', '游ゴシック体', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'Meiryo', 'メイリオ', sans-serif")
+                                .attr("font-size", "14px")
+                                .attr("fill", "#000")
+                                .text("特例適用：1年分を当期で一括計上");
+
+                            // Add payment icon
+                            svg.append("text")
+                                .attr("x", 50)
+                                .attr("y", 100)
+                                .attr("text-anchor", "middle")
+                                .attr("font-family", "FontAwesome")
+                                .attr("font-size", "20px")
+                                .attr("fill", "#003366")
+                                .text("\uf155");
+                        });
+                    </script>
+</div>
+<!-- Tips section -->
+<div class="bg-white rounded-lg shadow-lg p-6 flex-grow">
+<h3 class="title-text text-xl font-bold text-blue-900 mb-3">実務ポイント</h3>
+<ul class="content-text text-gray-700 space-y-4">
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+<span>適用できる費用の例：家賃、保険料、リース料、メンテナンス契約料など</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+<span>支払いは決算月内に行い、支払証憑を保管しておくこと</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+<span>契約期間は原則として1年以内であること</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-exclamation-triangle text-yellow-600 mt-1 mr-3"></i>
+<span>毎期継続して適用することが望ましい（会計処理の継続性）</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Footer with page number -->
+<div class="bg-blue-900 h-2 w-full"></div>
+<div class="absolute bottom-4 right-8 bg-white rounded-full px-4 py-1 shadow-md">
+<span class="content-text text-blue-900 font-bold">13/44</span>
+</div>
+</div>
+
+</body></html>

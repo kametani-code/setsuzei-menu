@@ -1,0 +1,202 @@
+<!--Actual display size of this page: width=1280, height=808, aspect ratio=16:10.1--><!--Actual display size of this page: width=1280, height=808, aspect ratio=16:10.1--><!DOCTYPE html><html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>社宅制度の導入</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        @font-face {
+            font-family: "Yu Gothic";
+            src: local("Yu Gothic Medium"), local("YuGothic-Medium");
+            font-weight: normal;
+        }
+        @font-face {
+            font-family: "Yu Gothic";
+            src: local("Yu Gothic Bold"), local("YuGothic-Bold");
+            font-weight: bold;
+        }
+        body {
+            width: 1280px; 
+            min-height: 808px; 
+            margin: 0;
+            padding: 0;
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 808px;
+            position: relative;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+        }
+        .title-text {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            font-feature-settings: "palt";
+        }
+        .content-text {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            font-feature-settings: "palt";
+        }
+        .accent-bar {
+            background: linear-gradient(90deg, #FFD700 0%, #4CAF50 100%);
+            height: 4px;
+            width: 100px;
+        }
+        .benefit-card {
+            transition: transform 0.3s;
+        }
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+        .comparison-arrow {
+            position: relative;
+            height: 4px;
+            background-color: #003366;
+            margin: 0 15px;
+        }
+        .comparison-arrow:after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: -8px;
+            width: 0;
+            height: 0;
+            border-left: 15px solid #003366;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
+        * {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div class="slide bg-gray-100 flex flex-col overflow-hidden">
+<!-- Header with title -->
+<div class="bg-blue-900 text-white py-6 px-12 w-full">
+<div class="flex justify-between items-center">
+<div>
+<h1 class="title-text text-4xl font-bold">社宅制度の導入</h1>
+<p class="content-text text-xl mt-1 text-gray-200">役員・従業員の住居を法人契約に切り替える節税策</p>
+</div>
+<div class="flex items-center bg-yellow-500 rounded-full px-4 py-2">
+<i class="fas fa-home text-white text-2xl mr-2"></i>
+<span class="title-text text-white font-bold">組織・福利厚生関連</span>
+</div>
+</div>
+</div>
+<!-- Main content area -->
+<div class="flex flex-1 p-8 gap-6">
+<!-- Left column - Explanation -->
+<div class="w-1/2">
+<div class="bg-white rounded-lg shadow-lg p-6 h-full flex flex-col">
+<h2 class="title-text text-2xl font-bold text-blue-900 mb-2">社宅制度とは</h2>
+<div class="accent-bar mb-4"></div>
+<div class="content-text text-gray-700 space-y-4 mb-6">
+<p>
+<i class="fas fa-check-circle text-green-600 mr-2"></i>
+                            役員・従業員が現在住んでいる自宅を、法人との賃貸借契約に切り替える制度です。
+                        </p>
+<p>
+<i class="fas fa-check-circle text-green-600 mr-2"></i>
+                            法人が家主と賃貸借契約を結び、役員・従業員は法人から社宅として住居を提供されます。
+                        </p>
+</div>
+<h2 class="title-text text-2xl font-bold text-blue-900 mb-2">導入のポイント</h2>
+<div class="accent-bar mb-4"></div>
+<div class="content-text text-gray-700 space-y-4">
+<p>
+<i class="fas fa-lightbulb text-yellow-500 mr-2"></i>
+                            適正な賃料設定と社宅使用料の決定が重要です。
+                        </p>
+<p>
+<i class="fas fa-lightbulb text-yellow-500 mr-2"></i>
+                            社宅規程の整備と役員会・取締役会での承認が必要です。
+                        </p>
+<p>
+<i class="fas fa-lightbulb text-yellow-500 mr-2"></i>
+                            手続き時期：随時実施可能です。
+                        </p>
+</div>
+<div class="mt-auto">
+<div class="bg-blue-100 rounded-md p-3 border-l-4 border-blue-900">
+<p class="content-text text-blue-900 font-bold">
+<i class="fas fa-info-circle mr-2"></i>
+                                対象者：法人
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right column - Benefits and Comparison -->
+<div class="w-1/2 flex flex-col gap-6">
+<!-- Benefits cards -->
+<div class="grid grid-cols-2 gap-4">
+<div class="benefit-card bg-white rounded-lg shadow-lg p-5">
+<div class="bg-blue-900 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
+<i class="fas fa-file-invoice-dollar text-xl"></i>
+</div>
+<h3 class="title-text text-xl font-bold text-blue-900 mb-2">経費計上のメリット</h3>
+<p class="content-text text-gray-700">
+                            法人が支払う家賃の大部分を経費として計上でき、法人税の課税所得を圧縮できます。
+                        </p>
+</div>
+<div class="benefit-card bg-white rounded-lg shadow-lg p-5">
+<div class="bg-green-600 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
+<i class="fas fa-hand-holding-usd text-xl"></i>
+</div>
+<h3 class="title-text text-xl font-bold text-green-700 mb-2">社会保険料の削減</h3>
+<p class="content-text text-gray-700">
+                            社宅使用料が給与ではなく現物給付となるため、社会保険料の算定基礎から除外されます。
+                        </p>
+</div>
+</div>
+<!-- Before/After comparison -->
+<div class="bg-white rounded-lg shadow-lg p-6 flex-grow">
+<h3 class="title-text text-xl font-bold text-blue-900 mb-4">導入前後の比較</h3>
+<div class="flex items-center mb-6">
+<div class="w-5/12 bg-gray-100 rounded-lg p-4">
+<div class="flex items-center mb-2">
+<i class="fas fa-user text-xl text-gray-600 mr-2"></i>
+<h4 class="title-text font-bold text-gray-700">導入前</h4>
+</div>
+<div class="content-text text-gray-700">
+<p>・従業員が自ら賃貸契約</p>
+<p>・家賃は給与から支払い</p>
+<p>・全額が個人負担</p>
+<p>・給与所得として課税</p>
+</div>
+</div>
+<div class="comparison-arrow w-2/12"></div>
+<div class="w-5/12 bg-blue-50 rounded-lg p-4 border-2 border-blue-900">
+<div class="flex items-center mb-2">
+<i class="fas fa-building text-xl text-blue-900 mr-2"></i>
+<h4 class="title-text font-bold text-blue-900">導入後</h4>
+</div>
+<div class="content-text text-gray-700">
+<p>・法人が賃貸契約</p>
+<p>・家賃は法人が支払い</p>
+<p>・一部を社宅使用料として徴収</p>
+<p>・法人の経費として計上</p>
+</div>
+</div>
+</div>
+<div class="content-text text-gray-700 bg-yellow-50 rounded-md p-3 border-l-4 border-yellow-500">
+<p class="font-bold text-yellow-700">
+<i class="fas fa-exclamation-triangle text-yellow-600 mr-2"></i>
+                            注意点：社宅使用料の適正な金額設定が税務上重要です。不当に低い場合、給与課税の対象となる可能性があります。
+                        </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer with page number -->
+<div class="bg-blue-900 h-2 w-full"></div>
+<div class="absolute bottom-4 right-8 bg-white rounded-full px-4 py-1 shadow-md">
+<span class="content-text text-blue-900 font-bold">33/44</span>
+</div>
+</div>
+
+</body></html>

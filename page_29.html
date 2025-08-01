@@ -1,0 +1,207 @@
+<!--Actual display size of this page: width=1280, height=922, aspect ratio=16:11.5--><!--Actual display size of this page: width=1280, height=922, aspect ratio=16:11.5--><!DOCTYPE html><html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>繰戻還付制度の活用</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        @font-face {
+            font-family: "Yu Gothic";
+            src: local("Yu Gothic Medium"), local("YuGothic-Medium");
+            font-weight: normal;
+        }
+        @font-face {
+            font-family: "Yu Gothic";
+            src: local("Yu Gothic Bold"), local("YuGothic-Bold");
+            font-weight: bold;
+        }
+        body {
+            width: 1280px; 
+            min-height: 922px; 
+            margin: 0;
+            padding: 0;
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 922px;
+            position: relative;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+        }
+        .title-text {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            font-feature-settings: "palt";
+        }
+        .content-text {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            font-feature-settings: "palt";
+        }
+        .accent-bar {
+            background: linear-gradient(90deg, #FFD700 0%, #4CAF50 100%);
+            height: 4px;
+            width: 100px;
+        }
+        .info-box {
+            border-left: 4px solid;
+        }
+        .step-box {
+            position: relative;
+        }
+        .step-box::before {
+            content: "";
+            position: absolute;
+            left: 20px;
+            top: 65px;
+            height: calc(100% - 65px);
+            width: 2px;
+            background-color: #003366;
+        }
+        .step-box:last-child::before {
+            display: none;
+        }
+        .step-circle {
+            z-index: 10;
+        }
+        * {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div class="slide bg-gray-100 flex flex-col overflow-hidden">
+<!-- Header with title -->
+<div class="bg-blue-900 text-white py-6 px-12 w-full">
+<h1 class="title-text text-4xl font-bold">繰戻還付制度の活用</h1>
+<p class="content-text text-xl mt-1 text-gray-200">当期の赤字を前期の黒字と相殺し、法人税の還付を受ける</p>
+</div>
+<!-- Main content area -->
+<div class="flex flex-1 p-8 gap-6">
+<!-- Left column - explanation -->
+<div class="w-1/2">
+<!-- What is the system -->
+<div class="bg-white rounded-lg shadow-md p-6 mb-5">
+<h2 class="title-text text-2xl font-bold text-blue-900 flex items-center">
+<i class="fas fa-undo-alt text-blue-900 mr-3"></i>制度の概要
+                    </h2>
+<div class="accent-bar mb-4 mt-2"></div>
+<p class="content-text text-gray-700 mb-3">
+                        繰戻還付制度とは、当期に発生した欠損金（赤字）を前期の黒字と相殺することで、前期に納付した法人税の一部または全部の還付を受けられる制度です。
+                    </p>
+<div class="info-box border-green-600 bg-green-50 pl-4 py-2 pr-2 mt-4">
+<p class="content-text text-gray-800">
+<span class="font-bold">対象者:</span> 中小企業者等
+                        </p>
+</div>
+</div>
+<!-- Benefits -->
+<div class="bg-white rounded-lg shadow-md p-6">
+<h2 class="title-text text-2xl font-bold text-blue-900 flex items-center">
+<i class="fas fa-coins text-yellow-500 mr-3"></i>メリット
+                    </h2>
+<div class="accent-bar mb-4 mt-2"></div>
+<ul class="content-text text-gray-700 space-y-3">
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+<span>赤字発生年度にすぐに税金の還付を受けられる</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+<span>キャッシュフローの改善に直接貢献する</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+<span>通常の繰越控除と異なり、すぐに税メリットを享受できる</span>
+</li>
+</ul>
+<div class="info-box border-blue-900 bg-blue-50 pl-4 py-2 pr-2 mt-6">
+<p class="content-text text-gray-800">
+<span class="font-bold">節税効果:</span> 納税額の還付による即時の資金効果
+                        </p>
+</div>
+</div>
+</div>
+<!-- Right column - how it works and procedure -->
+<div class="w-1/2">
+<!-- How it works visualization -->
+<div class="bg-white rounded-lg shadow-md p-6 mb-5">
+<h2 class="title-text text-2xl font-bold text-blue-900 flex items-center">
+<i class="fas fa-cogs text-blue-900 mr-3"></i>仕組み
+                    </h2>
+<div class="accent-bar mb-4 mt-2"></div>
+<div class="flex justify-between items-center mt-6 mb-2 px-4">
+<div class="text-center">
+<div class="title-text font-bold text-lg">前期</div>
+<div class="bg-green-100 border border-green-500 rounded-lg p-3 mt-2 w-40">
+<p class="content-text font-bold text-green-800">黒字</p>
+<p class="content-text text-sm text-gray-600">法人税納付済み</p>
+</div>
+</div>
+<div class="flex flex-col items-center">
+<i class="fas fa-exchange-alt text-blue-900 text-2xl transform rotate-90 my-2"></i>
+<div class="bg-blue-100 border border-blue-500 rounded-lg p-2 text-center w-32">
+<p class="content-text text-sm text-blue-800">相殺</p>
+</div>
+</div>
+<div class="text-center">
+<div class="title-text font-bold text-lg">当期</div>
+<div class="bg-red-100 border border-red-500 rounded-lg p-3 mt-2 w-40">
+<p class="content-text font-bold text-red-800">赤字</p>
+<p class="content-text text-sm text-gray-600">欠損金発生</p>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-8">
+<div class="bg-yellow-100 border-2 border-yellow-500 rounded-lg p-3 text-center w-64">
+<i class="fas fa-yen-sign text-yellow-600 text-xl mb-1"></i>
+<p class="content-text font-bold text-yellow-800">法人税の還付</p>
+</div>
+</div>
+</div>
+<!-- Application procedure -->
+<div class="bg-white rounded-lg shadow-md p-6">
+<h2 class="title-text text-2xl font-bold text-blue-900 flex items-center">
+<i class="fas fa-clipboard-list text-blue-900 mr-3"></i>申請手続き
+                    </h2>
+<div class="accent-bar mb-4 mt-2"></div>
+<div class="space-y-1">
+<div class="step-box flex pl-10 pb-6 relative">
+<div class="step-circle absolute left-0 w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center text-white font-bold">1</div>
+<div>
+<p class="title-text font-bold text-blue-900">確定申告書の提出</p>
+<p class="content-text text-gray-700 text-sm">欠損金が生じた事業年度の確定申告書を提出</p>
+</div>
+</div>
+<div class="step-box flex pl-10 pb-6 relative">
+<div class="step-circle absolute left-0 w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center text-white font-bold">2</div>
+<div>
+<p class="title-text font-bold text-blue-900">還付請求書の提出</p>
+<p class="content-text text-gray-700 text-sm">「欠損金の繰戻しによる還付請求書」を作成・提出</p>
+</div>
+</div>
+<div class="step-box flex pl-10 pb-6 relative">
+<div class="step-circle absolute left-0 w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center text-white font-bold">3</div>
+<div>
+<p class="title-text font-bold text-blue-900">還付金の受領</p>
+<p class="content-text text-gray-700 text-sm">税務署による審査後、還付金が支払われる</p>
+</div>
+</div>
+</div>
+<div class="info-box border-yellow-500 bg-yellow-50 pl-4 py-2 pr-2 mt-3">
+<p class="content-text text-gray-800">
+<span class="font-bold">手続き時期:</span> 欠損発生年度の確定申告期限内
+                        </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer with page number -->
+<div class="bg-blue-900 h-2 w-full"></div>
+<div class="absolute bottom-4 right-8 bg-white rounded-full px-4 py-1 shadow-md">
+<span class="content-text text-blue-900 font-bold">29/44</span>
+</div>
+</div>
+
+</body></html>

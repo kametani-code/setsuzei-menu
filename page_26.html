@@ -1,0 +1,169 @@
+<!--Actual display size of this page: width=1280, height=814, aspect ratio=16:10.2--><!--Actual display size of this page: width=1280, height=814, aspect ratio=16:10.2--><!DOCTYPE html><html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>企業版ふるさと納税の活用</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        @font-face {
+            font-family: "Yu Gothic";
+            src: local("Yu Gothic Medium"), local("YuGothic-Medium");
+            font-weight: normal;
+        }
+        @font-face {
+            font-family: "Yu Gothic";
+            src: local("Yu Gothic Bold"), local("YuGothic-Bold");
+            font-weight: bold;
+        }
+        body {
+            width: 1280px; 
+            min-height: 814px; 
+            margin: 0;
+            padding: 0;
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 814px;
+            position: relative;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+        }
+        .title-text {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            font-feature-settings: "palt";
+        }
+        .content-text {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            font-feature-settings: "palt";
+        }
+        .accent-bar {
+            background: linear-gradient(90deg, #FFD700 0%, #4CAF50 100%);
+            height: 4px;
+            width: 100px;
+        }
+        .benefit-box {
+            border-left: 4px solid;
+        }
+        * {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div class="slide bg-gray-100 flex flex-col overflow-hidden">
+<!-- Header with title -->
+<div class="bg-blue-900 text-white py-6 px-12 w-full">
+<h1 class="title-text text-4xl font-bold">企業版ふるさと納税の活用</h1>
+<p class="content-text text-xl mt-1 text-gray-200">地方創生プロジェクトへの寄付による節税効果</p>
+</div>
+<!-- Main content area -->
+<div class="flex flex-1 p-8">
+<!-- Left column - explanation -->
+<div class="w-1/2 pr-6">
+<div class="bg-white rounded-lg shadow-lg p-6 h-full">
+<h2 class="title-text text-2xl font-bold text-blue-900 mb-3">制度概要</h2>
+<div class="accent-bar mb-5"></div>
+<div class="mb-6 flex items-start">
+<div class="bg-blue-100 rounded-full p-3 mr-4 flex-shrink-0">
+<i class="fas fa-landmark text-blue-900 text-2xl"></i>
+</div>
+<div>
+<p class="content-text text-gray-700 leading-relaxed">
+                                企業版ふるさと納税とは、法人が地方公共団体の地方創生プロジェクトに寄付を行うことで、通常の損金算入に加えて税額控除を受けられる制度です。
+                            </p>
+</div>
+</div>
+<div class="mb-6 flex items-start">
+<div class="bg-green-100 rounded-full p-3 mr-4 flex-shrink-0">
+<i class="fas fa-users text-green-600 text-2xl"></i>
+</div>
+<div>
+<h3 class="title-text text-lg font-bold text-gray-800 mb-1">対象者</h3>
+<p class="content-text text-gray-700">
+                                法人（個人事業主は対象外）
+                            </p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="bg-yellow-100 rounded-full p-3 mr-4 flex-shrink-0">
+<i class="fas fa-calendar-alt text-yellow-600 text-2xl"></i>
+</div>
+<div>
+<h3 class="title-text text-lg font-bold text-gray-800 mb-1">手続き時期／方法</h3>
+<p class="content-text text-gray-700">
+                                決算前に寄付の申出を行い、納付します。地方公共団体のプロジェクトを選び、直接問い合わせるか、内閣府の特設サイトで情報を確認できます。
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right column - benefits and visualization -->
+<div class="w-1/2 pl-6">
+<div class="bg-white rounded-lg shadow-lg p-6 mb-4">
+<h2 class="title-text text-2xl font-bold text-blue-900 mb-3">節税効果</h2>
+<div class="accent-bar mb-5"></div>
+<div class="benefit-box border-green-500 pl-4 py-2 mb-4">
+<h3 class="title-text text-lg font-bold text-gray-800 mb-1">
+<i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            通常の損金算入
+                        </h3>
+<p class="content-text text-gray-700">
+                            寄付金として一般的な損金算入限度額の範囲内で費用計上できます。
+                        </p>
+</div>
+<div class="benefit-box border-blue-500 pl-4 py-2 mb-4">
+<h3 class="title-text text-lg font-bold text-gray-800 mb-1">
+<i class="fas fa-plus-circle text-blue-500 mr-2"></i>
+                            税額控除の上乗せ
+                        </h3>
+<p class="content-text text-gray-700">
+                            損金算入に加えて、法人関係税（法人税・法人住民税・法人事業税）から寄付額の一部が直接控除されます。
+                        </p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-lg p-6">
+<h2 class="title-text text-xl font-bold text-blue-900 mb-3">メリット</h2>
+<div class="flex items-center mb-3">
+<div class="bg-blue-900 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 flex-shrink-0">
+<i class="fas fa-hand-holding-usd"></i>
+</div>
+<p class="content-text text-gray-700">
+                            実質的な税負担が大幅に軽減されます
+                        </p>
+</div>
+<div class="flex items-center mb-3">
+<div class="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 flex-shrink-0">
+<i class="fas fa-map-marker-alt"></i>
+</div>
+<p class="content-text text-gray-700">
+                            寄付先の地域や事業を選択できます
+                        </p>
+</div>
+<div class="flex items-center">
+<div class="bg-yellow-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 flex-shrink-0">
+<i class="fas fa-building"></i>
+</div>
+<p class="content-text text-gray-700">
+                            企業のCSR活動としてのPR効果も期待できます
+                        </p>
+</div>
+<div class="mt-4 bg-blue-50 p-3 rounded-lg border border-blue-200">
+<p class="content-text text-sm text-blue-800">
+<i class="fas fa-info-circle mr-1"></i>
+                            寄付を行う前に、税理士等の専門家に相談し、自社に最適な寄付額や時期を検討することをお勧めします。
+                        </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer with page number -->
+<div class="bg-blue-900 h-2 w-full"></div>
+<div class="absolute bottom-4 right-8 bg-white rounded-full px-4 py-1 shadow-md">
+<span class="content-text text-blue-900 font-bold">26/44</span>
+</div>
+</div>
+
+</body></html>

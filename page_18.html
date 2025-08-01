@@ -1,0 +1,189 @@
+<!--Actual display size of this page: width=1280, height=904, aspect ratio=16:11.3--><!--Actual display size of this page: width=1280, height=904, aspect ratio=16:11.3--><!DOCTYPE html><html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>中古資産の購入</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        @font-face {
+            font-family: "Yu Gothic";
+            src: local("Yu Gothic Medium"), local("YuGothic-Medium");
+            font-weight: normal;
+        }
+        @font-face {
+            font-family: "Yu Gothic";
+            src: local("Yu Gothic Bold"), local("YuGothic-Bold");
+            font-weight: bold;
+        }
+        body {
+            width: 1280px; 
+            min-height: 904px; 
+            margin: 0;
+            padding: 0;
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 904px;
+            position: relative;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+        }
+        .title-text {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            font-feature-settings: "palt";
+        }
+        .content-text {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            font-feature-settings: "palt";
+        }
+        .accent-bar {
+            background: linear-gradient(90deg, #FFD700 0%, #4CAF50 100%);
+            height: 4px;
+            width: 120px;
+        }
+        .feature-box {
+            border-left: 4px solid;
+            transition: transform 0.2s;
+        }
+        .feature-box:hover {
+            transform: translateX(5px);
+        }
+        .step-circle {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin-right: 12px;
+        }
+        * {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div class="slide bg-gray-100 flex flex-col overflow-hidden">
+<!-- Header with title -->
+<div class="bg-blue-900 text-white py-6 px-12 w-full">
+<h1 class="title-text text-4xl font-bold">中古資産の購入</h1>
+<p class="content-text text-xl mt-1 text-gray-200">減価償却費の早期計上による節税効果</p>
+</div>
+<!-- Main content area -->
+<div class="flex flex-1 p-8">
+<!-- Left side - explanation -->
+<div class="w-1/2 pr-6">
+<div class="bg-white rounded-lg shadow-lg p-6 h-full flex flex-col">
+<h2 class="title-text text-2xl font-bold text-blue-900 mb-2">中古資産購入の節税メリット</h2>
+<div class="accent-bar mb-6"></div>
+<p class="content-text text-gray-700 mb-6">
+                        中古資産を購入することで、新品よりも短い耐用年数を適用し、減価償却費を早期に経費計上できます。これにより、法人税や所得税の課税所得を効果的に圧縮できます。
+                    </p>
+<div class="feature-box border-yellow-500 bg-yellow-50 rounded-r-lg p-4 mb-4">
+<h3 class="title-text text-lg font-bold text-yellow-600 mb-2">
+<i class="fas fa-coins mr-2"></i>節税効果
+                        </h3>
+<p class="content-text text-gray-700">
+                            減価償却費の早期計上により、初年度からの経費化を促進し、課税所得を減少させます。
+                        </p>
+</div>
+<div class="feature-box border-green-600 bg-green-50 rounded-r-lg p-4 mb-4">
+<h3 class="title-text text-lg font-bold text-green-700 mb-2">
+<i class="fas fa-users mr-2"></i>対象者
+                        </h3>
+<p class="content-text text-gray-700">
+                            法人・個人事業主のいずれも適用可能です。
+                        </p>
+</div>
+<div class="feature-box border-blue-900 bg-blue-50 rounded-r-lg p-4">
+<h3 class="title-text text-lg font-bold text-blue-900 mb-2">
+<i class="fas fa-calendar-alt mr-2"></i>手続き時期／方法
+                        </h3>
+<p class="content-text text-gray-700">
+                            資産取得時に適切な耐用年数を適用し、減価償却計算に反映します。
+                        </p>
+</div>
+<div class="mt-auto pt-4">
+<p class="content-text text-sm text-gray-500 italic">
+<i class="fas fa-info-circle mr-1"></i>
+                            中古資産の耐用年数は、法定耐用年数を基に計算する方法と、簡便法（一定割合を乗じる方法）があります。
+                        </p>
+</div>
+</div>
+</div>
+<!-- Right side - implementation steps -->
+<div class="w-1/2 pl-6">
+<div class="bg-white rounded-lg shadow-lg p-6 h-full flex flex-col">
+<h2 class="title-text text-2xl font-bold text-blue-900 mb-2">実施のポイント</h2>
+<div class="accent-bar mb-6"></div>
+<div class="flex items-start mb-5">
+<div class="step-circle bg-blue-900 title-text">1</div>
+<div>
+<h3 class="title-text text-lg font-bold text-blue-900">適切な中古資産の選定</h3>
+<p class="content-text text-gray-700 mt-1">
+                                事業に必要な設備や機械、車両などの中古資産を見極めます。価格と品質のバランスを考慮しましょう。
+                            </p>
+</div>
+</div>
+<div class="flex items-start mb-5">
+<div class="step-circle bg-yellow-500 title-text">2</div>
+<div>
+<h3 class="title-text text-lg font-bold text-yellow-600">耐用年数の計算</h3>
+<p class="content-text text-gray-700 mt-1">
+                                中古資産の耐用年数は以下のいずれかの方法で計算します：
+                            </p>
+<ul class="content-text text-gray-700 mt-2 list-disc pl-5">
+<li>法定耐用年数×（1－経過年数／法定耐用年数）</li>
+<li>法定耐用年数×20％（簡便法）</li>
+<li>どちらも2年未満の場合は2年</li>
+</ul>
+</div>
+</div>
+<div class="flex items-start mb-5">
+<div class="step-circle bg-green-600 title-text">3</div>
+<div>
+<h3 class="title-text text-lg font-bold text-green-700">取得時の留意点</h3>
+<p class="content-text text-gray-700 mt-1">
+                                取得時には、以下の証明書類を確実に保管しておきましょう：
+                            </p>
+<ul class="content-text text-gray-700 mt-2 list-disc pl-5">
+<li>売買契約書</li>
+<li>領収書または振込証明</li>
+<li>中古資産であることの証明（製造年月日など）</li>
+</ul>
+</div>
+</div>
+<div class="flex items-start">
+<div class="step-circle bg-purple-600 title-text">4</div>
+<div>
+<h3 class="title-text text-lg font-bold text-purple-700">減価償却の実施</h3>
+<p class="content-text text-gray-700 mt-1">
+                                算出した耐用年数に基づいて減価償却を実施し、法人税申告書や確定申告書に反映させます。
+                            </p>
+</div>
+</div>
+<div class="mt-auto bg-gray-100 rounded-lg p-4">
+<div class="flex items-center">
+<i class="fas fa-lightbulb text-2xl text-yellow-500 mr-3"></i>
+<p class="content-text text-gray-700">
+<span class="font-bold">実務ヒント：</span>
+                                中古資産と合わせて、30万円未満の少額資産購入（P.17参照）も検討することで、さらなる節税効果が期待できます。
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer with page number -->
+<div class="bg-blue-900 h-2 w-full"></div>
+<div class="absolute bottom-4 right-8 bg-white rounded-full px-4 py-1 shadow-md">
+<span class="content-text text-blue-900 font-bold">18/44</span>
+</div>
+</div>
+
+</body></html>

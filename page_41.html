@@ -1,0 +1,229 @@
+<!--Actual display size of this page: width=1280, height=840, aspect ratio=16:10.5--><!--Actual display size of this page: width=1280, height=840, aspect ratio=16:10.5--><!DOCTYPE html><html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>決算期の変更</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        @font-face {
+            font-family: "Yu Gothic";
+            src: local("Yu Gothic Medium"), local("YuGothic-Medium");
+            font-weight: normal;
+        }
+        @font-face {
+            font-family: "Yu Gothic";
+            src: local("Yu Gothic Bold"), local("YuGothic-Bold");
+            font-weight: bold;
+        }
+        body {
+            width: 1280px; 
+            min-height: 840px; 
+            margin: 0;
+            padding: 0;
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 840px;
+            position: relative;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+        }
+        .title-text {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            font-feature-settings: "palt";
+        }
+        .content-text {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            font-feature-settings: "palt";
+        }
+        .feature-box {
+            border-left: 4px solid;
+        }
+        .timeline-container {
+            position: relative;
+            height: 180px;
+        }
+        .timeline-line {
+            position: absolute;
+            top: 70px;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #003366;
+        }
+        .timeline-point {
+            position: absolute;
+            top: 62px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #003366;
+        }
+        .timeline-label {
+            position: absolute;
+            top: 90px;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 120px;
+        }
+        .timeline-event {
+            position: absolute;
+            width: 160px;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .timeline-event.top {
+            top: 0;
+            transform: translateX(-50%);
+        }
+        .timeline-event.bottom {
+            top: 100px;
+            transform: translateX(-50%);
+        }
+        * {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div class="slide bg-gray-100 flex flex-col overflow-hidden">
+<!-- Header with title -->
+<div class="bg-blue-900 text-white py-6 px-12 w-full">
+<h1 class="title-text text-4xl font-bold">決算期の変更</h1>
+<p class="content-text text-xl mt-1 text-gray-200">利益の期ずれによる納税資金の準備期間確保</p>
+</div>
+<!-- Main content area -->
+<div class="flex flex-1 p-8">
+<!-- Left column - Explanation -->
+<div class="w-1/2 pr-6">
+<div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+<h2 class="title-text text-2xl font-bold text-blue-900 mb-3 flex items-center">
+<i class="fas fa-calendar-alt text-yellow-500 mr-3"></i>
+                        決算期変更とは
+                    </h2>
+<p class="content-text text-gray-700 mb-4">
+                        会社の決算期を変更することで、期末に集中する利益を翌期に認識させ、納税資金の準備期間を確保する節税方法です。
+                    </p>
+<p class="content-text text-gray-700">
+                        例えば、3月決算を6月決算に変更することで、3〜6月の利益計上を遅らせることができます。
+                    </p>
+</div>
+<div class="bg-white rounded-lg shadow-lg p-6">
+<h2 class="title-text text-2xl font-bold text-blue-900 mb-3 flex items-center">
+<i class="fas fa-coins text-green-600 mr-3"></i>
+                        節税メリット
+                    </h2>
+<!-- Feature 1 -->
+<div class="feature-box border-yellow-500 bg-yellow-50 pl-4 py-3 pr-3 mb-4 rounded-r-lg">
+<h3 class="title-text text-lg font-bold text-yellow-700">納税資金の準備期間確保</h3>
+<p class="content-text text-gray-700 text-sm">
+                            税金の納付期限を延ばすことで、資金繰りに余裕を持たせることができます。
+                        </p>
+</div>
+<!-- Feature 2 -->
+<div class="feature-box border-green-600 bg-green-50 pl-4 py-3 pr-3 mb-4 rounded-r-lg">
+<h3 class="title-text text-lg font-bold text-green-700">期末の利益分散</h3>
+<p class="content-text text-gray-700 text-sm">
+                            期末に集中する売上・利益を分散させ、税負担を平準化できます。
+                        </p>
+</div>
+<!-- Feature 3 -->
+<div class="feature-box border-blue-900 bg-blue-50 pl-4 py-3 pr-3 rounded-r-lg">
+<h3 class="title-text text-lg font-bold text-blue-900">事業サイクルへの適合</h3>
+<p class="content-text text-gray-700 text-sm">
+                            事業の繁忙期と決算期を分離させ、効率的な経営判断が可能になります。
+                        </p>
+</div>
+</div>
+</div>
+<!-- Right column - Visual and Implementation -->
+<div class="w-1/2 pl-6">
+<!-- Timeline visualization -->
+<div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+<h2 class="title-text text-2xl font-bold text-blue-900 mb-3 flex items-center">
+<i class="fas fa-exchange-alt text-purple-600 mr-3"></i>
+                        決算期変更の効果
+                    </h2>
+<div class="timeline-container">
+<div class="timeline-line"></div>
+<!-- Timeline points -->
+<div class="timeline-point" style="left: 10%;"></div>
+<div class="timeline-point" style="left: 35%;"></div>
+<div class="timeline-point" style="left: 60%;"></div>
+<div class="timeline-point" style="left: 85%;"></div>
+<!-- Timeline labels -->
+<div class="timeline-label content-text text-sm text-gray-600" style="left: 10%;">1月</div>
+<div class="timeline-label content-text text-sm text-gray-600" style="left: 35%;">3月<br/>(旧決算期)</div>
+<div class="timeline-label content-text text-sm text-gray-600" style="left: 60%;">6月<br/>(新決算期)</div>
+<div class="timeline-label content-text text-sm text-gray-600" style="left: 85%;">9月</div>
+<!-- Timeline events -->
+<div class="timeline-event top bg-red-100 border border-red-300" style="left: 35%;">
+<span class="title-text text-sm font-bold text-red-700">大きな利益発生</span>
+</div>
+<div class="timeline-event bottom bg-green-100 border border-green-300" style="left: 60%;">
+<span class="title-text text-sm font-bold text-green-700">納税資金準備期間<br/>確保</span>
+</div>
+</div>
+</div>
+<!-- Implementation details -->
+<div class="bg-white rounded-lg shadow-lg p-6">
+<h2 class="title-text text-2xl font-bold text-blue-900 mb-3 flex items-center">
+<i class="fas fa-clipboard-list text-red-600 mr-3"></i>
+                        実施方法と注意点
+                    </h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-gray-50 p-4 rounded-lg">
+<h3 class="title-text text-lg font-bold text-blue-900 mb-2">対象者</h3>
+<p class="content-text text-gray-700 text-sm">
+<i class="fas fa-check-circle text-green-600 mr-1"></i> 利益が期末に偏る法人
+                            </p>
+<p class="content-text text-gray-700 text-sm mt-1">
+<i class="fas fa-check-circle text-green-600 mr-1"></i> 事業の繁忙期が決算期と重なる企業
+                            </p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<h3 class="title-text text-lg font-bold text-blue-900 mb-2">手続き時期</h3>
+<p class="content-text text-gray-700 text-sm">
+<i class="fas fa-calendar-check text-blue-900 mr-1"></i> 随時（定款変更が必要）
+                            </p>
+<p class="content-text text-gray-700 text-sm mt-1">
+<i class="fas fa-exclamation-triangle text-yellow-500 mr-1"></i> 事前に税理士に相談
+                            </p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg col-span-2">
+<h3 class="title-text text-lg font-bold text-blue-900 mb-2">必要な手続き</h3>
+<div class="flex">
+<div class="w-1/2 pr-2">
+<p class="content-text text-gray-700 text-sm">
+<i class="fas fa-file-alt text-blue-900 mr-1"></i> 株主総会での決議
+                                    </p>
+<p class="content-text text-gray-700 text-sm mt-1">
+<i class="fas fa-file-alt text-blue-900 mr-1"></i> 定款の変更
+                                    </p>
+</div>
+<div class="w-1/2 pl-2">
+<p class="content-text text-gray-700 text-sm">
+<i class="fas fa-file-alt text-blue-900 mr-1"></i> 登記事項の変更
+                                    </p>
+<p class="content-text text-gray-700 text-sm mt-1">
+<i class="fas fa-file-alt text-blue-900 mr-1"></i> 所轄税務署への届出
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer with page number -->
+<div class="bg-blue-900 h-2 w-full"></div>
+<div class="absolute bottom-4 right-8 bg-white rounded-full px-4 py-1 shadow-md">
+<span class="content-text text-blue-900 font-bold">41/44</span>
+</div>
+</div>
+
+</body></html>

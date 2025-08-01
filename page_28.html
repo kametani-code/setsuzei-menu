@@ -1,0 +1,254 @@
+<!--Actual display size of this page: width=1280, height=852, aspect ratio=16:10.7--><!--Actual display size of this page: width=1280, height=852, aspect ratio=16:10.7--><!DOCTYPE html><html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>繰越欠損金の活用</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        @font-face {
+            font-family: "Yu Gothic";
+            src: local("Yu Gothic Medium"), local("YuGothic-Medium");
+            font-weight: normal;
+        }
+        @font-face {
+            font-family: "Yu Gothic";
+            src: local("Yu Gothic Bold"), local("YuGothic-Bold");
+            font-weight: bold;
+        }
+        body {
+            width: 1280px; 
+            min-height: 852px; 
+            margin: 0;
+            padding: 0;
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 852px;
+            position: relative;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+        }
+        .title-text {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            font-feature-settings: "palt";
+        }
+        .content-text {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            font-feature-settings: "palt";
+        }
+        .accent-bar {
+            background: linear-gradient(90deg, #FFD700 0%, #4CAF50 100%);
+            height: 4px;
+            width: 100px;
+        }
+        .info-box {
+            border-left: 4px solid;
+        }
+        .timeline-container {
+            position: relative;
+            height: 180px;
+        }
+        .timeline-line {
+            position: absolute;
+            top: 90px;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-color: #003366;
+        }
+        .timeline-item {
+            position: absolute;
+            width: 120px;
+            text-align: center;
+        }
+        .timeline-point {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .timeline-label {
+            margin-top: 8px;
+            font-weight: bold;
+        }
+        .timeline-sublabel {
+            font-size: 0.85rem;
+        }
+        * {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div class="slide bg-gray-100 flex flex-col overflow-hidden">
+<!-- Header with title -->
+<div class="bg-blue-900 text-white py-6 px-12 w-full">
+<h1 class="title-text text-4xl font-bold">繰越欠損金の活用</h1>
+<p class="content-text text-xl mt-1 text-gray-200">過去の赤字を活用した課税所得の圧縮</p>
+</div>
+<!-- Main content area -->
+<div class="flex flex-1 p-8">
+<div class="w-full">
+<!-- Overview section -->
+<div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+<h2 class="title-text text-2xl font-bold text-blue-900 mb-2">繰越欠損金とは</h2>
+<div class="accent-bar mb-4"></div>
+<p class="content-text text-gray-700 mb-4">
+                        過去の事業年度で生じた赤字（欠損金）を、一定期間内の将来の黒字（所得）と相殺できる制度です。
+                        これにより、課税所得を減少させて法人税等の負担を軽減することができます。
+                    </p>
+</div>
+<!-- Visual representation -->
+<div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+<h2 class="title-text text-xl font-bold text-blue-900 mb-4">繰越欠損金の仕組み</h2>
+<div class="timeline-container">
+<div class="timeline-line"></div>
+<!-- Past Loss Year 1 -->
+<div class="timeline-item" style="left: 60px; top: 0;">
+<div class="timeline-point bg-red-600">
+<i class="fas fa-arrow-down"></i>
+</div>
+<div class="timeline-label text-red-600">1期前</div>
+<div class="timeline-sublabel text-gray-600">赤字発生</div>
+</div>
+<!-- Past Loss Year 2 -->
+<div class="timeline-item" style="left: 220px; top: 0;">
+<div class="timeline-point bg-red-600">
+<i class="fas fa-arrow-down"></i>
+</div>
+<div class="timeline-label text-red-600">2期前</div>
+<div class="timeline-sublabel text-gray-600">赤字発生</div>
+</div>
+<!-- Current Year -->
+<div class="timeline-item" style="left: 380px; top: 0;">
+<div class="timeline-point bg-green-600">
+<i class="fas fa-arrow-up"></i>
+</div>
+<div class="timeline-label text-green-600">当期</div>
+<div class="timeline-sublabel text-gray-600">黒字発生</div>
+</div>
+<!-- Offset Effect -->
+<div class="timeline-item" style="left: 540px; top: 0;">
+<div class="timeline-point bg-yellow-500">
+<i class="fas fa-exchange-alt"></i>
+</div>
+<div class="timeline-label text-yellow-600">相殺</div>
+<div class="timeline-sublabel text-gray-600">課税所得減少</div>
+</div>
+<!-- Tax Saving -->
+<div class="timeline-item" style="left: 700px; top: 0;">
+<div class="timeline-point bg-blue-900">
+<i class="fas fa-coins"></i>
+</div>
+<div class="timeline-label text-blue-900">節税効果</div>
+<div class="timeline-sublabel text-gray-600">税負担軽減</div>
+</div>
+<!-- Past Loss Description -->
+<div class="bg-red-100 rounded-lg p-3" style="position: absolute; left: 60px; top: 110px; width: 280px;">
+<p class="content-text text-sm">
+<i class="fas fa-exclamation-circle text-red-600 mr-2"></i>
+<span class="font-bold">過去の欠損金：</span> 事業活動の結果生じた赤字を繰越欠損金として記録
+                            </p>
+</div>
+<!-- Current Year Profit -->
+<div class="bg-green-100 rounded-lg p-3" style="position: absolute; left: 380px; top: 110px; width: 280px;">
+<p class="content-text text-sm">
+<i class="fas fa-check-circle text-green-600 mr-2"></i>
+<span class="font-bold">当期の利益と相殺：</span> 黒字と過去の欠損金を相殺して課税所得を圧縮
+                            </p>
+</div>
+<!-- Tax Saving Effect -->
+<div class="bg-blue-100 rounded-lg p-3" style="position: absolute; left: 700px; top: 110px; width: 280px;">
+<p class="content-text text-sm">
+<i class="fas fa-lightbulb text-blue-900 mr-2"></i>
+<span class="font-bold">節税効果：</span> 課税所得の圧縮により、法人税等の負担を軽減
+                            </p>
+</div>
+</div>
+</div>
+<!-- Key points section -->
+<div class="flex space-x-6">
+<!-- Implementation details -->
+<div class="bg-white rounded-lg shadow-lg p-5 flex-1 info-box border-blue-900">
+<h3 class="title-text text-lg font-bold text-blue-900 flex items-center">
+<i class="fas fa-info-circle mr-2"></i>繰越欠損金の適用条件
+                        </h3>
+<ul class="content-text text-gray-700 mt-3 space-y-2">
+<li class="flex items-start">
+<i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+<span>欠損金のある法人が対象</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+<span>青色申告書を提出している必要あり</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+<span>控除限度額は課税所得の一定割合まで</span>
+</li>
+</ul>
+</div>
+<!-- Benefits -->
+<div class="bg-white rounded-lg shadow-lg p-5 flex-1 info-box border-yellow-500">
+<h3 class="title-text text-lg font-bold text-yellow-600 flex items-center">
+<i class="fas fa-star mr-2"></i>繰越欠損金の活用メリット
+                        </h3>
+<ul class="content-text text-gray-700 mt-3 space-y-2">
+<li class="flex items-start">
+<i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+<span>課税所得の圧縮による税負担軽減</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+<span>過去の赤字を有効活用できる</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+<span>中小企業者等は特例あり</span>
+</li>
+</ul>
+</div>
+<!-- Important notes -->
+<div class="bg-white rounded-lg shadow-lg p-5 flex-1 info-box border-green-600">
+<h3 class="title-text text-lg font-bold text-green-700 flex items-center">
+<i class="fas fa-calendar-alt mr-2"></i>実施時期と手続き
+                        </h3>
+<ul class="content-text text-gray-700 mt-3 space-y-2">
+<li class="flex items-start">
+<i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+<span>利益計上年度の確定申告で適用</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+<span>繰越欠損金の明細書を添付</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+<span>適切な帳簿書類の保存が必要</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer with page number -->
+<div class="bg-blue-900 h-2 w-full"></div>
+<div class="absolute bottom-4 right-8 bg-white rounded-full px-4 py-1 shadow-md">
+<span class="content-text text-blue-900 font-bold">28/44</span>
+</div>
+<!-- Category indicator -->
+<div class="absolute top-24 right-8 bg-green-600 text-white rounded-lg px-4 py-2 shadow-md">
+<span class="content-text font-bold flex items-center">
+<i class="fas fa-university mr-2"></i>制度・税制優遇
+            </span>
+</div>
+</div>
+
+</body></html>

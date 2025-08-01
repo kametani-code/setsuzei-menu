@@ -1,0 +1,227 @@
+<!--Actual display size of this page: width=1280, height=908, aspect ratio=16:11.3--><!--Actual display size of this page: width=1280, height=908, aspect ratio=16:11.3--><!DOCTYPE html><html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>売上計上タイミングの見直し</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        @font-face {
+            font-family: "Yu Gothic";
+            src: local("Yu Gothic Medium"), local("YuGothic-Medium");
+            font-weight: normal;
+        }
+        @font-face {
+            font-family: "Yu Gothic";
+            src: local("Yu Gothic Bold"), local("YuGothic-Bold");
+            font-weight: bold;
+        }
+        body {
+            width: 1280px; 
+            min-height: 908px; 
+            margin: 0;
+            padding: 0;
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 908px;
+            position: relative;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+        }
+        .title-text {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            font-feature-settings: "palt";
+        }
+        .content-text {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            font-feature-settings: "palt";
+        }
+        .timeline-point {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+        .timeline-connector {
+            height: 4px;
+        }
+        * {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div class="slide bg-gray-100 flex flex-col overflow-hidden">
+<!-- Header with title -->
+<div class="bg-blue-900 text-white py-6 px-12 w-full">
+<h1 class="title-text text-4xl font-bold">売上計上タイミングの見直し</h1>
+<p class="content-text text-xl mt-1 text-gray-200">税法上認められる範囲内での課税繰延方法</p>
+</div>
+<!-- Main content area -->
+<div class="flex flex-1 p-8">
+<!-- Left column - Main explanation -->
+<div class="w-7/12 pr-8">
+<div class="bg-white rounded-lg shadow-lg p-6 h-full flex flex-col">
+<h2 class="title-text text-2xl font-bold text-blue-900 mb-4">売上計上のタイミング最適化</h2>
+<div class="mb-6">
+<h3 class="title-text text-xl font-semibold text-blue-800 mb-2 flex items-center">
+<i class="fas fa-lightbulb text-yellow-500 mr-2"></i>
+                            基本的な考え方
+                        </h3>
+<p class="content-text text-gray-700 mb-3">
+                            税法上認められる最も遅い基準（検収基準など）で売上を計上することで、課税を繰り延べることができます。これにより、キャッシュフローを改善し、税負担のタイミングを調整できます。
+                        </p>
+</div>
+<div class="mb-6">
+<h3 class="title-text text-xl font-semibold text-blue-800 mb-2 flex items-center">
+<i class="fas fa-check-circle text-green-600 mr-2"></i>
+                            主な売上計上基準
+                        </h3>
+<ul class="content-text text-gray-700 space-y-2 list-inside">
+<li class="flex items-start">
+<i class="fas fa-angle-right text-blue-900 mt-1 mr-2"></i>
+<span><span class="font-semibold">出荷基準：</span>商品を出荷した時点で売上計上（一般的）</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-angle-right text-blue-900 mt-1 mr-2"></i>
+<span><span class="font-semibold">検収基準：</span>顧客が商品・サービスを検収した時点で売上計上</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-angle-right text-blue-900 mt-1 mr-2"></i>
+<span><span class="font-semibold">引渡基準：</span>商品を顧客に引き渡した時点で売上計上</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-angle-right text-blue-900 mt-1 mr-2"></i>
+<span><span class="font-semibold">入金基準：</span>代金の入金があった時点で売上計上（特定の条件下）</span>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="title-text text-xl font-semibold text-blue-800 mb-2 flex items-center">
+<i class="fas fa-exclamation-triangle text-yellow-500 mr-2"></i>
+                            注意点
+                        </h3>
+<ul class="content-text text-gray-700 space-y-2 list-inside">
+<li class="flex items-start">
+<i class="fas fa-angle-right text-blue-900 mt-1 mr-2"></i>
+<span>採用した基準は継続的に適用する必要があります</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-angle-right text-blue-900 mt-1 mr-2"></i>
+<span>恣意的な操作は税務否認のリスクがあります</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-angle-right text-blue-900 mt-1 mr-2"></i>
+<span>業種・取引内容によって適用できる基準が異なります</span>
+</li>
+</ul>
+</div>
+<div class="mt-auto">
+<div class="flex items-center justify-start text-gray-600 bg-blue-50 rounded-lg p-3">
+<i class="fas fa-info-circle text-blue-900 text-xl mr-3"></i>
+<span class="content-text">適用対象：法人・個人事業主</span>
+<span class="mx-4">|</span>
+<span class="content-text">節税効果：課税の繰延</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right column - Visual explanation -->
+<div class="w-5/12">
+<div class="bg-white rounded-lg shadow-lg p-6 h-full flex flex-col">
+<!-- Timeline visualization -->
+<h3 class="title-text text-xl font-semibold text-blue-800 mb-4 flex items-center">
+<i class="fas fa-clock text-blue-900 mr-2"></i>
+                        売上計上タイミングの比較
+                    </h3>
+<div class="relative mb-8 mt-2">
+<!-- Timeline base -->
+<div class="w-full bg-gray-200 h-1 absolute top-5"></div>
+<!-- Timeline points -->
+<div class="flex justify-between relative">
+<div class="flex flex-col items-center">
+<div class="timeline-point bg-blue-900 z-10"></div>
+<p class="content-text text-sm mt-2">受注</p>
+<div class="mt-2 w-24 h-24 rounded-full bg-blue-100 flex items-center justify-center">
+<i class="fas fa-file-signature text-blue-900 text-4xl"></i>
+</div>
+</div>
+<div class="flex flex-col items-center">
+<div class="timeline-point bg-blue-900 z-10"></div>
+<p class="content-text text-sm mt-2">出荷</p>
+<div class="mt-2 w-24 h-24 rounded-full bg-blue-100 flex items-center justify-center">
+<i class="fas fa-shipping-fast text-blue-900 text-4xl"></i>
+</div>
+</div>
+<div class="flex flex-col items-center">
+<div class="timeline-point bg-blue-900 z-10"></div>
+<p class="content-text text-sm mt-2">検収</p>
+<div class="mt-2 w-24 h-24 rounded-full bg-blue-100 flex items-center justify-center">
+<i class="fas fa-clipboard-check text-blue-900 text-4xl"></i>
+</div>
+</div>
+<div class="flex flex-col items-center">
+<div class="timeline-point bg-blue-900 z-10"></div>
+<p class="content-text text-sm mt-2">入金</p>
+<div class="mt-2 w-24 h-24 rounded-full bg-blue-100 flex items-center justify-center">
+<i class="fas fa-money-bill-wave text-blue-900 text-4xl"></i>
+</div>
+</div>
+</div>
+</div>
+<!-- Recognition comparison -->
+<div class="mb-6">
+<h4 class="title-text text-lg font-semibold text-green-700 mb-2">早期計上 vs 繰延計上</h4>
+<div class="bg-gray-50 p-4 rounded-lg mb-4">
+<div class="flex items-center mb-2">
+<i class="fas fa-calendar-day text-red-500 mr-2"></i>
+<span class="title-text font-semibold">早期計上（出荷基準）</span>
+</div>
+<p class="content-text text-gray-700 text-sm">
+                                商品出荷時点で売上計上。早期の課税発生により、納税のタイミングが早まります。
+                            </p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<div class="flex items-center mb-2">
+<i class="fas fa-calendar-alt text-green-600 mr-2"></i>
+<span class="title-text font-semibold">繰延計上（検収基準）</span>
+</div>
+<p class="content-text text-gray-700 text-sm">
+                                顧客の検収完了時点で売上計上。課税時期を遅らせることで、キャッシュフローの改善が図れます。
+                            </p>
+</div>
+</div>
+<!-- Benefits -->
+<div class="mt-auto bg-blue-50 rounded-lg p-4">
+<h4 class="title-text text-lg font-semibold text-blue-900 mb-2 flex items-center">
+<i class="fas fa-star text-yellow-500 mr-2"></i>
+                            最適化のメリット
+                        </h4>
+<ul class="content-text text-gray-700 space-y-1">
+<li class="flex items-start">
+<i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+<span>納税資金の確保期間の延長</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+<span>キャッシュフローの改善</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+<span>事業年度をまたぐ場合の課税年度調整</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer with page number -->
+<div class="bg-blue-900 h-2 w-full"></div>
+<div class="absolute bottom-4 right-8 bg-white rounded-full px-4 py-1 shadow-md">
+<span class="content-text text-blue-900 font-bold">16/44</span>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,263 @@
+<!--Actual display size of this page: width=1280, height=788, aspect ratio=16:9.8--><!--Actual display size of this page: width=1280, height=788, aspect ratio=16:9.8--><!DOCTYPE html><html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>修繕費の検討</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        @font-face {
+            font-family: "Yu Gothic";
+            src: local("Yu Gothic Medium"), local("YuGothic-Medium");
+            font-weight: normal;
+        }
+        @font-face {
+            font-family: "Yu Gothic";
+            src: local("Yu Gothic Bold"), local("YuGothic-Bold");
+            font-weight: bold;
+        }
+        body {
+            width: 1280px; 
+            min-height: 788px; 
+            margin: 0;
+            padding: 0;
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 788px;
+            position: relative;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+        }
+        .title-text {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            font-feature-settings: "palt";
+        }
+        .content-text {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            font-feature-settings: "palt";
+        }
+        .comparison-box {
+            position: relative;
+        }
+        .comparison-box::after {
+            content: "vs";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background-color: #FFD700;
+            color: #003366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 16px;
+            z-index: 10;
+        }
+        .accent-bar {
+            background: linear-gradient(90deg, #FFD700 0%, #4CAF50 100%);
+            height: 4px;
+            width: 100px;
+        }
+        .benefit-item {
+            transition: transform 0.2s;
+        }
+        .benefit-item:hover {
+            transform: translateY(-3px);
+        }
+        * {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div class="slide bg-gray-100 flex flex-col overflow-hidden">
+<!-- Header with title -->
+<div class="bg-blue-900 text-white py-6 px-12 w-full">
+<h1 class="title-text text-4xl font-bold">修繕費の検討</h1>
+<p class="content-text text-xl mt-1 text-gray-200">固定資産の修繕に関する区分と節税効果</p>
+</div>
+<!-- Main content area -->
+<div class="flex flex-1 p-8">
+<!-- Left side - Comparison and examples -->
+<div class="w-3/5 pr-6">
+<h2 class="title-text text-2xl font-bold text-blue-900 mb-4">資本的支出と修繕費の区分</h2>
+<div class="accent-bar mb-6"></div>
+<!-- Comparison boxes -->
+<div class="comparison-box flex justify-between mb-8">
+<!-- Capital Expenditure -->
+<div class="w-[48%] bg-white rounded-lg shadow-lg p-5">
+<div class="flex items-center mb-3">
+<div class="bg-blue-900 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3">
+<i class="fas fa-building-circle-check"></i>
+</div>
+<h3 class="title-text text-xl font-bold text-blue-900">資本的支出</h3>
+</div>
+<p class="content-text text-gray-700 mb-3">
+                            固定資産の価値を高め、耐用年数を延長させる支出
+                        </p>
+<div class="bg-blue-50 rounded-md p-3">
+<p class="content-text text-gray-700 text-sm">
+<i class="fas fa-circle-info text-blue-700 mr-2"></i>
+<span class="font-bold">例：</span>増築、改築、構造変更、機能向上
+                            </p>
+<p class="content-text text-gray-700 text-sm mt-2">
+<i class="fas fa-circle-exclamation text-red-600 mr-2"></i>
+<span class="font-bold">処理：</span>減価償却資産として複数年で償却
+                            </p>
+</div>
+</div>
+<!-- Repair Expenses -->
+<div class="w-[48%] bg-white rounded-lg shadow-lg p-5">
+<div class="flex items-center mb-3">
+<div class="bg-green-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3">
+<i class="fas fa-screwdriver-wrench"></i>
+</div>
+<h3 class="title-text text-xl font-bold text-green-700">修繕費</h3>
+</div>
+<p class="content-text text-gray-700 mb-3">
+                            固定資産の機能維持・原状回復のための支出
+                        </p>
+<div class="bg-green-50 rounded-md p-3">
+<p class="content-text text-gray-700 text-sm">
+<i class="fas fa-circle-info text-green-700 mr-2"></i>
+<span class="font-bold">例：</span>壁の塗り替え、部品交換、故障修理
+                            </p>
+<p class="content-text text-gray-700 text-sm mt-2">
+<i class="fas fa-circle-check text-green-600 mr-2"></i>
+<span class="font-bold">処理：</span>当期の損金（費用）として一括計上
+                            </p>
+</div>
+</div>
+</div>
+<!-- Guidelines for distinction -->
+<div class="bg-white rounded-lg shadow-lg p-5 mb-6">
+<h3 class="title-text text-lg font-bold text-blue-900 mb-3">区分の判断基準</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-start">
+<i class="fas fa-ruler text-yellow-500 mt-1 mr-2"></i>
+<p class="content-text text-gray-700 text-sm">
+<span class="font-bold">金額基準：</span>
+                                20万円未満の支出は修繕費として処理可能
+                            </p>
+</div>
+<div class="flex items-start">
+<i class="fas fa-clock text-yellow-500 mt-1 mr-2"></i>
+<p class="content-text text-gray-700 text-sm">
+<span class="font-bold">周期基準：</span>
+                                おおむね3年以内の周期で行う修繕は修繕費
+                            </p>
+</div>
+<div class="flex items-start">
+<i class="fas fa-percentage text-yellow-500 mt-1 mr-2"></i>
+<p class="content-text text-gray-700 text-sm">
+<span class="font-bold">割合基準：</span>
+                                取得価額の10%未満の支出は修繕費として処理可能
+                            </p>
+</div>
+<div class="flex items-start">
+<i class="fas fa-file-invoice text-yellow-500 mt-1 mr-2"></i>
+<p class="content-text text-gray-700 text-sm">
+<span class="font-bold">証明資料：</span>
+                                修繕内容が分かる資料や写真を保管しておく
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right side - Benefits and implementation -->
+<div class="w-2/5 pl-6">
+<h2 class="title-text text-2xl font-bold text-blue-900 mb-4">節税効果と実施のポイント</h2>
+<div class="accent-bar mb-6"></div>
+<!-- Tax benefits -->
+<div class="bg-white rounded-lg shadow-lg p-5 mb-6">
+<h3 class="title-text text-lg font-bold text-blue-900 mb-3">節税効果</h3>
+<div class="space-y-4">
+<div class="benefit-item flex items-start p-2 bg-blue-50 rounded-md">
+<div class="bg-blue-900 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 flex-shrink-0">
+<i class="fas fa-coins text-sm"></i>
+</div>
+<div>
+<p class="content-text text-gray-700 text-sm font-bold">即時費用化</p>
+<p class="content-text text-gray-600 text-xs">
+                                    資本的支出は複数年で償却するのに対し、修繕費は支出した期に全額損金算入できる
+                                </p>
+</div>
+</div>
+<div class="benefit-item flex items-start p-2 bg-blue-50 rounded-md">
+<div class="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 flex-shrink-0">
+<i class="fas fa-calculator text-sm"></i>
+</div>
+<div>
+<p class="content-text text-gray-700 text-sm font-bold">法人税・所得税の軽減</p>
+<p class="content-text text-gray-600 text-xs">
+                                    法人の場合は法人税、個人事業主の場合は所得税の課税所得を減少させる効果
+                                </p>
+</div>
+</div>
+<div class="benefit-item flex items-start p-2 bg-blue-50 rounded-md">
+<div class="bg-yellow-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 flex-shrink-0">
+<i class="fas fa-chart-line text-sm"></i>
+</div>
+<div>
+<p class="content-text text-gray-700 text-sm font-bold">キャッシュフローの改善</p>
+<p class="content-text text-gray-600 text-xs">
+                                    初年度の税負担が軽減されることで、資金繰りが改善される
+                                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Implementation points -->
+<div class="bg-white rounded-lg shadow-lg p-5">
+<h3 class="title-text text-lg font-bold text-blue-900 mb-3">実施のポイント</h3>
+<ul class="space-y-3">
+<li class="flex items-center">
+<i class="fas fa-calendar-check text-green-600 mr-3"></i>
+<p class="content-text text-gray-700 text-sm">
+<span class="font-bold">実施時期：</span>
+                                決算前に計画的に実施する
+                            </p>
+</li>
+<li class="flex items-center">
+<i class="fas fa-file-contract text-green-600 mr-3"></i>
+<p class="content-text text-gray-700 text-sm">
+<span class="font-bold">証憑保管：</span>
+                                修繕内容が明確にわかる見積書・請求書を保管
+                            </p>
+</li>
+<li class="flex items-center">
+<i class="fas fa-camera text-green-600 mr-3"></i>
+<p class="content-text text-gray-700 text-sm">
+<span class="font-bold">写真撮影：</span>
+                                修繕前後の写真を撮影して保管しておく
+                            </p>
+</li>
+<li class="flex items-center">
+<i class="fas fa-user-tie text-green-600 mr-3"></i>
+<p class="content-text text-gray-700 text-sm">
+<span class="font-bold">専門家相談：</span>
+                                判断に迷う場合は税理士に相談する
+                            </p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Footer with target and page number -->
+<div class="bg-blue-900 h-2 w-full"></div>
+<div class="absolute bottom-4 left-8 bg-white rounded-full px-4 py-1 shadow-md flex items-center">
+<i class="fas fa-users text-blue-900 mr-2"></i>
+<span class="content-text text-blue-900">対象：法人・個人事業主</span>
+</div>
+<div class="absolute bottom-4 right-8 bg-white rounded-full px-4 py-1 shadow-md">
+<span class="content-text text-blue-900 font-bold">12/44</span>
+</div>
+</div>
+
+</body></html>

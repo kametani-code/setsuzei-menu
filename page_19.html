@@ -1,0 +1,219 @@
+<!--Actual display size of this page: width=1280, height=828, aspect ratio=16:10.3--><!--Actual display size of this page: width=1280, height=828, aspect ratio=16:10.3--><!DOCTYPE html><html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>含み損のある資産の売却</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        @font-face {
+            font-family: "Yu Gothic";
+            src: local("Yu Gothic Medium"), local("YuGothic-Medium");
+            font-weight: normal;
+        }
+        @font-face {
+            font-family: "Yu Gothic";
+            src: local("Yu Gothic Bold"), local("YuGothic-Bold");
+            font-weight: bold;
+        }
+        body {
+            width: 1280px; 
+            min-height: 828px; 
+            margin: 0;
+            padding: 0;
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 828px;
+            position: relative;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+        }
+        .title-text {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            font-feature-settings: "palt";
+        }
+        .content-text {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+            font-feature-settings: "palt";
+        }
+        .accent-bar {
+            background: linear-gradient(90deg, #FFD700 0%, #4CAF50 100%);
+            height: 4px;
+            width: 100px;
+        }
+        .info-box {
+            border-left: 4px solid;
+        }
+        .step-circle {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        * {
+            font-family: "Yu Gothic", "YuGothic", "游ゴシック", "游ゴシック体", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo", "メイリオ", sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div class="slide bg-gray-100 flex flex-col overflow-hidden">
+<!-- Header with title -->
+<div class="bg-blue-900 text-white py-6 px-12 w-full">
+<div class="flex items-center">
+<div class="mr-4">
+<i class="fas fa-chart-line text-yellow-400 text-3xl"></i>
+</div>
+<div>
+<h1 class="title-text text-4xl font-bold">含み損のある資産の売却</h1>
+<p class="content-text text-xl mt-1 text-gray-200">損失計上による節税効果の活用</p>
+</div>
+</div>
+</div>
+<!-- Main content area -->
+<div class="flex flex-1 p-8">
+<!-- Left column - main explanation -->
+<div class="w-2/3 pr-6">
+<div class="bg-white rounded-lg shadow-lg p-6 h-full flex flex-col">
+<h2 class="title-text text-2xl font-bold text-blue-900 mb-3">概要と節税効果</h2>
+<div class="accent-bar mb-5"></div>
+<p class="content-text text-gray-700 mb-4">
+                        含み損（時価が取得価額を下回っている状態）のある有価証券やゴルフ会員権などを売却することで、
+                        売却損を計上し、課税所得を圧縮することができます。
+                    </p>
+<div class="bg-blue-50 p-4 rounded-lg mb-5">
+<h3 class="title-text text-xl font-bold text-blue-900 mb-2">対象資産例</h3>
+<div class="flex flex-wrap gap-3">
+<div class="flex items-center bg-white p-2 rounded shadow-sm">
+<i class="fas fa-file-invoice-dollar text-yellow-500 mr-2"></i>
+<span class="content-text">株式</span>
+</div>
+<div class="flex items-center bg-white p-2 rounded shadow-sm">
+<i class="fas fa-landmark text-yellow-500 mr-2"></i>
+<span class="content-text">債券</span>
+</div>
+<div class="flex items-center bg-white p-2 rounded shadow-sm">
+<i class="fas fa-golf-ball text-yellow-500 mr-2"></i>
+<span class="content-text">ゴルフ会員権</span>
+</div>
+<div class="flex items-center bg-white p-2 rounded shadow-sm">
+<i class="fas fa-building text-yellow-500 mr-2"></i>
+<span class="content-text">不動産</span>
+</div>
+</div>
+</div>
+<h3 class="title-text text-xl font-bold text-blue-900 mb-2">売却損計上の効果</h3>
+<div class="flex flex-col gap-3 mb-5">
+<div class="flex items-start">
+<div class="step-circle bg-blue-900 text-white mr-3 flex-shrink-0">
+<span class="title-text">1</span>
+</div>
+<p class="content-text text-gray-700">
+                                含み損のある資産を売却することで、<span class="font-bold">会計上の損失を確定</span>させます。
+                            </p>
+</div>
+<div class="flex items-start">
+<div class="step-circle bg-blue-900 text-white mr-3 flex-shrink-0">
+<span class="title-text">2</span>
+</div>
+<p class="content-text text-gray-700">
+                                確定した損失は<span class="font-bold">法人税の課税所得から控除</span>されるため、納税額を減らすことができます。
+                            </p>
+</div>
+<div class="flex items-start">
+<div class="step-circle bg-blue-900 text-white mr-3 flex-shrink-0">
+<span class="title-text">3</span>
+</div>
+<p class="content-text text-gray-700">
+                                特に<span class="font-bold">決算期末に利益が出る見込み</span>の場合に有効な対策となります。
+                            </p>
+</div>
+</div>
+<div class="mt-auto">
+<div class="info-box border-yellow-500 bg-yellow-50 p-4 rounded-r-lg">
+<h3 class="title-text font-bold text-yellow-700 mb-1">実施上の注意点</h3>
+<p class="content-text text-gray-700">
+                                売却後すぐに同一銘柄を再取得するなど、租税回避と見なされる取引には注意が必要です。
+                                売却の事実を証明できる資料（売買契約書等）を保管しておきましょう。
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right column - key points and timing -->
+<div class="w-1/3 flex flex-col gap-6">
+<!-- Top box - key points -->
+<div class="bg-white rounded-lg shadow-lg p-6">
+<div class="flex items-center mb-4">
+<i class="fas fa-key text-yellow-500 text-2xl mr-3"></i>
+<h2 class="title-text text-2xl font-bold text-blue-900">ポイント</h2>
+</div>
+<div class="accent-bar mb-4"></div>
+<ul class="space-y-3">
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+<p class="content-text text-gray-700">
+<span class="font-bold">法人</span>が対象（個人事業主は譲渡所得の取扱いが異なります）
+                            </p>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+<p class="content-text text-gray-700">
+                                期中でも実施可能だが、<span class="font-bold">決算時の利益状況</span>を見て判断するのが効果的
+                            </p>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+<p class="content-text text-gray-700">
+                                含み損の大きい資産から優先的に検討
+                            </p>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+<p class="content-text text-gray-700">
+                                将来的に価値回復の見込みが低い資産を選定
+                            </p>
+</li>
+</ul>
+</div>
+<!-- Bottom box - timing -->
+<div class="bg-white rounded-lg shadow-lg p-6 flex-grow">
+<div class="flex items-center mb-4">
+<i class="fas fa-calendar-alt text-green-600 text-2xl mr-3"></i>
+<h2 class="title-text text-2xl font-bold text-blue-900">実施時期</h2>
+</div>
+<div class="accent-bar mb-4"></div>
+<div class="bg-blue-50 p-4 rounded-lg mb-4">
+<div class="flex justify-between items-center">
+<span class="content-text font-bold text-blue-900">推奨タイミング:</span>
+<span class="content-text bg-blue-900 text-white px-3 py-1 rounded-full">期中・決算時</span>
+</div>
+</div>
+<div class="mb-4">
+<h3 class="title-text font-bold text-gray-700 mb-2">最適な実施タイミング</h3>
+<div class="relative h-12 bg-gray-200 rounded-lg overflow-hidden">
+<div class="absolute h-full bg-gradient-to-r from-yellow-300 to-green-500 rounded-l-lg" style="width: 75%"></div>
+<div class="absolute inset-0 flex items-center justify-around">
+<span class="content-text text-gray-600">期首</span>
+<span class="content-text text-gray-600">期中</span>
+<span class="content-text bg-white px-2 py-0.5 rounded shadow">決算直前</span>
+<span class="content-text text-gray-600">決算日</span>
+</div>
+</div>
+<p class="content-text text-sm text-gray-600 mt-1">※決算前の利益状況を確認してから実施するのが効果的</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer with page number -->
+<div class="bg-blue-900 h-2 w-full"></div>
+<div class="absolute bottom-4 right-8 bg-white rounded-full px-4 py-1 shadow-md">
+<span class="content-text text-blue-900 font-bold">19/44</span>
+</div>
+</div>
+
+</body></html>
